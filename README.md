@@ -7,7 +7,7 @@
 ### Links and Resources
 * [submission PR](http://xyz.com)
 * [travis](http://xyz.com)
-* [sandbox](https://codesandbox.io/s/laughing-napier-dvvx8)
+* [sandbox](https://codesandbox.io/s/github/meron-401n14/lab-26)
 
 
 #### Documentation
@@ -30,6 +30,8 @@
 * `MONGODB_URI` - URL to the running mongo instance/db
 
 #### Running the app
+* to run the app we need to first run 'json-server public/db.json --port 8000' as it is my API 
+  from which data has been fetch 
 * `npm start`
 * Endpoint: `/foo/bar/`
   * Returns a JSON object with abc in it.
