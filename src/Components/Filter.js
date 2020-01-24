@@ -38,7 +38,7 @@ render() {
 }
 
 const mapStateToProps = state=> ({
-  products:state.products.items,
+ products:state.products.items,
   filteredProducts:state.products.filteredItems,
   type:state.products.size,
   sort:state.products.sort

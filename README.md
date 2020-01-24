@@ -5,7 +5,7 @@
 ### Author: Meron
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
+* [Netlify](https://csb-252rj.netlify.com)
 * [travis](http://xyz.com)
 * [sandbox](https://codesandbox.io/s/github/meron-401n14/lab-26)
 
