@@ -9,11 +9,9 @@ import {addToCart} from '../actions/cartActions';
 
  class Products extends Component {
 
-  componentWillMount(){
-      this.props.fetchProducts();
-    //const {fetchProducts} = this.props;
-   //console.log( fetchProducts())
-   //console.log(this.props.fetchProducts());
+  componentDidMount() {
+  this.props.fetchProducts()
+    
   }
 
    render(){
@@ -48,6 +46,7 @@ import {addToCart} from '../actions/cartActions';
   }
 
 const mapStateToProps = state=> ({
+  //products:state.products.items,
   products: state.products.filteredItems,
   cartItems:state.cart.items
 

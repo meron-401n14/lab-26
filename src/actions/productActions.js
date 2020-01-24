@@ -4,14 +4,14 @@ import {FILTER_PRODUCTS_BY_TYPE} from './types'
 import { ORDER_PRODUCTS_BY_PRICE} from './types'
 
 
-export const fetchProducts = () => (dispatch)=> {
-  fetch('http://localhost:8000/products').then(res => res.json())
-  .then(data => {
-    console.log(data)
-    return {type:FETCH_PRODUCTS, payload:data}
-    
-  })
-    
+export const fetchProducts = () => dispatch => {
+return  fetch('http://localhost:8000/products')
+.then(res => res.json())
+  .then(data =>dispatch({
+    type:FETCH_PRODUCTS,
+    payload: data
+  }) 
+  );   
 }
 
 
@@ -21,7 +21,7 @@ export const filterProducts = (products, type) => (dispatch)=> {
      type:FILTER_PRODUCTS_BY_TYPE ,
      payload:{
        type: type,
-       items:type === ''? products: products.filter(a => a.Type.indexOf(type.toUpperCase())>=0)
+       items:type === ''? products: products.filter(a => a.Type.indexOf(type.toUpperCase())>=1)
      }
    })
 }
@@ -30,9 +30,9 @@ export const sortProducts = (items, sort) => (dispatch)=> {
   const products = items.slice();
   if(sort !== ''){
     products.sort((a,b)=>(sort==="lowest")?
-     (a.price > b.price ? 1:-1):(a.price < b.price?1:-1))
+     (a.price < b.price ? 1:-1):(a.price < b.price? 1:-1))
   } else {
-    products.sort((a,b)=>(a.id < b.id?1:-1));
+    products.sort((a,b)=>(a.id < b.id? 1:-1));
   }
 
   return dispatch({
