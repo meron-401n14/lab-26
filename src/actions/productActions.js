@@ -26,7 +26,8 @@ export const filterProducts = (products, type) => (dispatch)=> {
    })
 }
     
-export const sortProducts = (products, sort) => (dispatch)=> {
+export const sortProducts = (items, sort) => (dispatch)=> {
+  const products = items.slice();
   if(sort !== ''){
     products.sort((a,b)=>(sort==="lowest")?
      (a.price > b.price ? 1:-1):(a.price < b.price?1:-1))

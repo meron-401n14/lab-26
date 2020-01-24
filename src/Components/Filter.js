@@ -8,7 +8,7 @@ render() {
   return (
     <div className="row">
         <div className="col-md-4">
-          {this.props.count} products found.</div>
+          {this.props.filteredProducts.length} products found.</div>
         <div className="col-md-4">
           <label>
             Order by 

@@ -13,7 +13,7 @@ export default function (state = initialState, action){
       return {...state, filteredItems: action.payload.items, type:action.payload.type};
 
       case ORDER_PRODUCTS_BY_PRICE: 
-      return {...state, filteredItems: action.payload.items, type:action.payload.type};
+      return {...state, filteredItems: action.payload.items, sort:action.payload.type};
         default:
           return state;
   }

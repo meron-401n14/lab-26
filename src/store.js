@@ -5,6 +5,10 @@ import rootReducer from './reducers'
 
 const initialState = {};
 
+if(localStorage.getItem('cartItems')){
+  initialState.cart={items:JSON.parse(localStorage.getItem('cartItems'))}
+}
+
 
 //const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
