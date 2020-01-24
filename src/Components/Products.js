@@ -9,7 +9,7 @@ import {fetchProducts} from '../actions/productActions';
  class Products extends Component {
 
   componentDidMount(){
-    this.props.fetchProducts();
+   console.log(this.props.fetchProducts());
   }
 
    render(){
@@ -43,7 +43,7 @@ import {fetchProducts} from '../actions/productActions';
 
   }
 
-const mapStateToProps = state=> ({products: state.products.items});
+const mapStateToProps = state=> ({products: state.products.filteredItems});
 
 
 export default connect(mapStateToProps, {fetchProducts})(Products)

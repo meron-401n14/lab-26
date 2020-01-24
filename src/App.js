@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import ReactDOM from 'react-dom';
+
 
 import Products from './Components/Products';
 import Filter from './Components/Filter';
@@ -27,7 +27,9 @@ class App extends Component {
     this.handleRemoveFromCart=this.handleRemoveFromCart.bind(this);
   }
 
-  componentDidMount() {
+ componentDidMount() {
+
+  
     if(localStorage.getItem('cartItems')){
       this.setState({cartItems: JSON.parse(localStorage.getItem('cartItems'))});
     }
